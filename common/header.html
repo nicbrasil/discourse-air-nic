@@ -1,4 +1,10 @@
 <div class="background-container"></div>
 <script>
     console.log("tema ativado")
+    document.addEventListener('DOMContentLoaded', function () {
+        const button = document.querySelector('.sign-up-button');
+        if (button) {
+            button.style.display = 'none';
+        }
+    });
 </script>
