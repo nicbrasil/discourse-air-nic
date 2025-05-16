@@ -2,9 +2,37 @@
 <script>
     console.log("tema ativado")
     document.addEventListener('DOMContentLoaded', function () {
-        const button = document.querySelector('.sign-up-button');
-        if (button) {
-            button.style.display = 'none';
+        const loginBody = document.querySelector('.login-body');
+        const loginForm = document.querySelector('.login-left-side');
+
+        if (loginBody) {
+            const titulo = document.createElement('h1');
+            titulo.className = 'login-title';
+            titulo.textContent = 'Comunidade Fib';
+            loginBody.parentNode.insertBefore(titulo, loginBody);
         }
+
+        if (loginBody) {
+            const subTitulo = document.createElement('span');
+            subTitulo.classList.add('subtitulo-destaque');
+            subTitulo.innerHTML = 'Acesse via <span>Cursos e Eventos</span>';
+            loginBody.parentNode.insertBefore(subTitulo, loginBody);
+        }
+
+        if (loginForm && loginForm.parentNode) {
+            const tituloAuthDiscourse = document.createElement('button');
+            tituloAuthDiscourse.className = 'login-discourse-title';
+            tituloAuthDiscourse.innerHTML = 'Ou faça login pelo Discourse <span class="arrow-btn">&rsaquo;</span>';
+
+            loginForm.parentNode.insertBefore(tituloAuthDiscourse, loginForm.nextSibling);
+            loginForm.classList.add('hidden');
+
+            const arrowButton = tituloAuthDiscourse.querySelector('.arrow-btn');
+            tituloAuthDiscourse.addEventListener('click', () => {
+                arrowButton.classList.toggle('rotated');
+                loginForm.classList.toggle('hidden');
+            });
+        }
+
     });
 </script>

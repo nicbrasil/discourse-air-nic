@@ -693,3 +693,77 @@ html body #main-outlet {
   box-shadow: none !important;
   margin-bottom: 5px !important;
 }
+
+.login-body {
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.passkey-login-button {
+  display: none;
+}
+
+.login-right-side::before {
+  height: 2px !important;
+  width: 350% !important;
+  bottom: 0;
+  top: inherit !important;
+  transform: translateX(-50%) !important;
+  left: 50% !important;
+}
+
+.login-title {
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.login-right-side {
+  padding: 20px 0 60px 0 !important;
+}
+
+.subtitulo-destaque {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+
+  span {
+    color: #14aeea;
+    font-weight: bold;
+  }
+}
+
+.login-page-cta__no-account-yet,
+.login-page-cta__signup {
+  display: none;
+}
+
+.login-left-side {
+  padding: 0 !important;
+  margin-bottom: 30px;
+}
+
+.login-discourse-title {
+  margin-top: 50px;
+  background-color: transparent;
+  border: none;
+}
+
+.arrow-btn {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 1.2em;
+  color: #14aeea;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.arrow-btn.rotated {
+  transform: rotate(90deg);
+}
+
+.main-outlet {
+  height: fit-content !important;
+}
+
+.sign-up-button {
+  display: none;
+}
