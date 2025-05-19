@@ -2,6 +2,11 @@
 <script>
     console.log("tema ativado")
     document.addEventListener('DOMContentLoaded', function () {
+
+        if (window.location.pathname === "/login") {
+            window.location.reload();
+        }
+        
         const loginBody = document.querySelector('.login-body');
         const loginForm = document.querySelector('.login-left-side');
 
