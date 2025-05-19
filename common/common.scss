@@ -713,8 +713,7 @@ html body #main-outlet {
 }
 
 .login-title {
-  margin-bottom: 50px;
-  margin-top: 10px;
+  margin: 50px 0;
 }
 
 .login-right-side {
@@ -765,5 +764,9 @@ html body #main-outlet {
 }
 
 .sign-up-button {
+  display: none;
+}
+
+.login-welcome-header {
   display: none;
 }
