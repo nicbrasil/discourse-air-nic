@@ -11,7 +11,7 @@ export default {
           // Aguarda o DOM estar pronto para manipulação
           requestAnimationFrame(() => {
             const loginBody = document.querySelector(".login-body");
-            const loginForm = document.querySelector(".login-left-side");
+            const loginForm = document.querySelector("#login-form");
 
             // Evita duplicar elementos se já foram inseridos
             if (loginBody) {
@@ -28,21 +28,29 @@ export default {
               loginBody.parentNode.insertBefore(subTitulo, loginBody);
             }
 
-            if (!document.querySelector(".login-discourse-title") && loginForm && loginForm.parentNode) {
+            if (loginForm && loginForm.parentElement) {
+              const container = loginForm.parentElement;
+
+              const button = document.querySelector(".login-page-cta")
+
               const tituloAuthDiscourse = document.createElement("button");
               tituloAuthDiscourse.className = "login-discourse-title";
               tituloAuthDiscourse.innerHTML =
                 'Ou faça login pelo Discourse <span class="arrow-btn">&rsaquo;</span>';
 
-              loginForm.parentNode.insertBefore(tituloAuthDiscourse, loginForm.nextSibling);
-              loginForm.classList.add("hidden");
+              container.parentNode.insertBefore(tituloAuthDiscourse, container);
+
+              container.classList.add("hidden");
+              button.classList.add("hidden");
 
               const arrowButton = tituloAuthDiscourse.querySelector(".arrow-btn");
               tituloAuthDiscourse.addEventListener("click", () => {
                 arrowButton.classList.toggle("rotated");
-                loginForm.classList.toggle("hidden");
+                container.classList.toggle("hidden");
+                button.classList.toggle("hidden");
               });
             }
+
           });
         }
       });
