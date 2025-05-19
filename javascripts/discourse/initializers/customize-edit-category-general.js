@@ -31,25 +31,26 @@ export default {
             if (loginForm && loginForm.parentElement) {
               const container = loginForm.parentElement;
 
-              const button = document.querySelector(".login-page-cta")
+              const button = document.querySelector(".login-page-cta");
 
               const tituloAuthDiscourse = document.createElement("button");
               tituloAuthDiscourse.className = "login-discourse-title";
               tituloAuthDiscourse.innerHTML =
                 'Ou faça login pelo Discourse <span class="arrow-btn">&rsaquo;</span>';
 
-              container.parentNode.insertBefore(tituloAuthDiscourse, container);
+              container.insertBefore(tituloAuthDiscourse, container.firstChild);
 
-              container.classList.add("hidden");
+              loginForm.classList.add("hidden");
               button.classList.add("hidden");
 
               const arrowButton = tituloAuthDiscourse.querySelector(".arrow-btn");
               tituloAuthDiscourse.addEventListener("click", () => {
                 arrowButton.classList.toggle("rotated");
-                container.classList.toggle("hidden");
+                loginForm.classList.toggle("hidden");
                 button.classList.toggle("hidden");
               });
             }
+
 
           });
         }
