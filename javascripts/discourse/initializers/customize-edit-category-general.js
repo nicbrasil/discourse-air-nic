@@ -14,7 +14,7 @@ export default {
             const loginForm = document.querySelector(".login-left-side");
 
             // Evita duplicar elementos se já foram inseridos
-            if (!document.querySelector(".login-title") && loginBody) {
+            if (loginBody) {
               const titulo = document.createElement("h1");
               titulo.className = "login-title";
               titulo.textContent = "Comunidade Fib";
@@ -46,7 +46,7 @@ export default {
           });
         }
       });
-      
+
       api.modifyClass("component:edit-category-general", {
         pluginId: "discourse-air",
 
