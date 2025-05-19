@@ -4,6 +4,7 @@
   h1 {
     font-size: 2.5em !important;
   }
+
   p {
     font-weight: normal;
     font-size: $font-up-1;
@@ -59,7 +60,7 @@ html body #main-outlet .docs {
 //   margin-bottom: 0px;
 // }
 
-.container.posts > .row {
+.container.posts>.row {
   max-width: calc(100vw - 1.5em);
 }
 
@@ -94,12 +95,14 @@ ol.category-breadcrumb {
     border-radius: 8px;
     border: none;
     background-color: var(--secondary);
+
     a:hover,
     a:focus {
       color: var(--primary);
       background-color: var(--secondary);
     }
   }
+
   .drop {
     top: calc(100% + 0.5em);
     border-radius: 8px;
@@ -183,17 +186,13 @@ ol.category-breadcrumb {
 
 .full-width .contents .topic-list .topic-list-item .posts-map {
   padding: 0;
+
   .number {
     margin: 0;
   }
 }
 
-.full-width
-  .contents
-  .topic-list
-  .topic-list-body
-  .topic-list-item
-  .topic-list-data.posts {
+.full-width .contents .topic-list .topic-list-body .topic-list-item .topic-list-data.posts {
   width: unset;
 }
 
@@ -206,16 +205,23 @@ ol.category-breadcrumb {
 
 .category-list-item.category {
   background: var(--secondary);
+
   // border-radius: 1em;
   tbody {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
+
   td {
     width: 100%;
   }
+
   .num.posts {
     padding-right: 0.25em;
   }
+}
+
+.login-fullpage {
+  text-align: center;
 }
