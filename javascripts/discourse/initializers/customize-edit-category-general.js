@@ -6,6 +6,7 @@ export default {
 
   initialize() {
     withPluginApi("0.8.14", (api) => {
+      console.log("arquivo customozado ativado")
       api.modifyClass("component:edit-category-general", {
         pluginId: "discourse-air",
 
