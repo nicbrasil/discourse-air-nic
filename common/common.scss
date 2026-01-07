@@ -695,7 +695,6 @@ html body #main-outlet {
 }
 
 .login-body {
-  flex-direction: column-reverse;
   align-items: center;
 }
 
@@ -713,7 +712,7 @@ html body #main-outlet {
 }
 
 .login-title {
-  margin: 50px 0;
+  margin: 150px 0 0 0;
 }
 
 .login-right-side {
@@ -728,11 +727,6 @@ html body #main-outlet {
     color: #14aeea;
     font-weight: bold;
   }
-}
-
-.login-page-cta__no-account-yet,
-.login-page-cta__signup {
-  display: none;
 }
 
 .login-left-side {
@@ -761,10 +755,6 @@ html body #main-outlet {
 
 .main-outlet {
   height: fit-content !important;
-}
-
-.sign-up-button {
-  display: none;
 }
 
 .login-welcome-header {
